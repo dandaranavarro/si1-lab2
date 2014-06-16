@@ -1,0 +1,70 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Metas Semanais </title>
+		<meta charset="UTF-8">
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+		
+		<!-- jQuery -->
+		<script src = "@routes.Assets.at("javascripts/jquery.js")"></script>
+		
+		<!-- meu próprio css e javascript -->
+		<link href = "@routes.Assets.at("stylesheets/styles.css")" rel="stylesheet">
+		<script src = "@routes.Assets.at("javascripts/exemplo.js")" type = "text/javascript"></script>
+	</head>
+
+	<body>
+		@content
+		<nav class="navbar navbar-aside">
+			<a class="navbar-brand" href="#">Minhas Metas</a>
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="#">Início</a>
+				</li>
+			</ul>
+		</nav>
+		
+		<div id="operacoesCrud" class="col-sm-4">
+
+		<!-- div adicionar série -->
+		<div id="addSerie" class="well col-sm-12"> 
+			<fieldset>
+				<legend> <i> Adicionar Meta </i> </legend>
+
+				<label> Meta: </label>
+				<input type="text" id="nome" class="form-control" value="" required="required">
+
+				<label title="Informações adicionais sobre o seriado."> Observação </label>
+				<textarea id="observacao" class="form-control" ></textarea>
+	
+				<label> Semana da realização: </label>
+				<input type="number" id="semana" class="form-control" value="" required="required">
+
+				<button type="button" onclick="adicionaSerie()" class="btn btn-primary">Adicionar</button>
+			</fieldset>
+		</div>
+
+		<!-- div remover serie -->
+		<div id="remSerie" class="well col-sm-12"> 
+			<fieldset>
+				<legend> <i> Remover Meta </i> </legend>
+
+				<label> Nome: </label>
+				<input type="text" id="nomeRem" class="form-control" value="" required="required">
+
+				<button type="button" onclick="removerMeta()" class="btn btn-primary">Remover</button>
+			</fieldset>
+		</div>
+		
+		</div>
+
+		<!-- div series -->
+		<div id="series" class="col-sm-7"> 
+			<h4 class="text-center">Metas a alcançar</h4>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+#addSerie {
+	margin:20px;background-color:rgba(0,200,0,0.4);
+}
+#remSerie {
+	margin-left:20px;
+}
+#series div{margin:20px;
+/*
+transform:rotate(-5deg); 
+-ms-transform:rotate(-5deg); 
+-webkit-transform:rotate(-5deg);
+*/ 
+/* Opera, Chrome, and Safari */
+}
